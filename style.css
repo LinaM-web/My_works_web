@@ -1,0 +1,153 @@
+/* علامة النجمة تعني تطبيق الكود على كل عناصر الصفحة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden; /* يمنع ظهور شريط تمرير أفقي مزعج للموقع ككل */
+}
+
+/* .1 */
+/* بداية كود الناف بار */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* يضع اللوقو في طرف والروابط في الطرف الآخر */
+    align-items: center;      
+    background-color: #ffffff;    
+    padding: 5px 30px;            /* مسافات داخلية للشريط */
+}
+
+.logo p {
+    color: #003380;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* المسافة بين الشعار والكتابة */
+}
+
+.logo img {
+    width: 60px; /* حجم الشعار */
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;                     /* يوزع مسافة متساوية بمقدار 20 بكسل بين الروابط الثلاثة */
+}
+
+
+.nav-links a {
+    color: #003380;
+    text-decoration: none;         /* إزالة الخط السفلي الافتراضي للروابط */
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+
+.nav-links a:hover {
+    color: #0052cc;               
+}
+
+/* نهاية كود الناف بار */
+
+
+/* .2 */
+/* بداية كود الصفحة الرئيسية */
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;800&display=swap');
+
+.main-section {
+    background-color: #003380;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative; 
+
+    background-image: 
+        url('images/main_p.png');
+
+    background-position: 
+        right;
+
+    background-repeat: 
+        no-repeat;
+
+    background-size: 
+        500px auto,
+        100% 100%;
+}  
+
+.main-content { /* وضعناها لكي نضع فيها الكتابة فقط لتسهيل التحكم  */ 
+flex: 1.2;                  /* إعطاء مساحة أكبر قليلاً للنص ليتنفس ولا يتداخل */
+  text-align: right;
+  direction: rtl;            /* يضمن ترتيب الكلمات العربية بشكل صحيح */
+}
+
+.main-section h1 { /* التحكم في العنوان الكبير */
+font-size: 2.8rem;          /* خط عريض وكبير مثل الصورة تماماً */
+  font-weight: 800;           /* سميك جداً للعنوان الرئيسي */
+  color: #003380;             /* لون شعارك الأزرق الملكي الداكن */
+  margin-bottom: 15px;
+  line-height: 1.3;           /* يمنع تداخل السطور */
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #4a5568;             /* رمادي احترافي هادئ بدلاً من الأسود الحاد */
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+
+.shop-now { /* التحكم في زر في الصفحة الرئيسية */
+display: inline-block;
+  background: linear-gradient(135deg, #c5a880, #a88958); /* تدرج ذهبي مطفأ وراقي مثل الصورة */
+  color: #ffffff;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;         /* انحناء ناعم وأنيق للحواف */
+  box-shadow: 0 4px 15px rgba(168, 137, 88, 0.3); /* ظل ذهبي خفيف يعطي حيوية للزر */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #2D1B10; 
+    color: #fae3ea;    
+    border: #fae3ea; 
+}
+
+/* 📱 التجاوب الكامل مع الموبايل ليحافظ على جماله */
+@media (max-width: 968px) {
+  .main-section {
+    flex-direction: column-reverse; /* الصورة فوق والنص تحتها */
+    text-align: center;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  
+  .main-content {
+    text-align: center;
+  }
+
+  .main-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+
+
+
