@@ -321,6 +321,8 @@
             background: var(--white);
             padding: 30px;
             border-radius: 20px;
+            flex-direction: column;
+            text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.02);
         }
 
@@ -342,11 +344,13 @@
             color: var(--primary-blue);
             font-size: 1.4rem;
             margin-bottom: 10px;
+                        text-align: center;
         }
 
         .about-text p {
             color: var(--text-dark);
             line-height: 1.7;
+                        text-align: center;
         }
 
         /* الفوتر (Footer) */
