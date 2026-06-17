@@ -167,12 +167,40 @@
             margin-bottom: 0;
         }
 
+
+        .why-us {
+          background-image: url(images/d.png);
+          background-repeat: no-repeat;
+        }
+
+
+        
+        .why-us h2 {
+           box-shadow: 0 5px 20px ;
+           max-width: 300px;
+           border-radius: 12px;
+           text-align: center;
+           /* 1. السطر السحري لتوسيط العناصر التي تملك عرضاً محدداً */
+    margin: 30px auto !important; 
+    
+    /* 2. إجبار العنصر على التصرف ككتلة مستقلة ليقبل التوسيط بالمارجن */
+    display: block !important;    
+    
+    /* 3. تحديد العرض بدقة بناءً على حجم النص حتى لا يتمدد على كامل الشاشة */
+    width: max-content !important; 
+
+        }
+
+
         /* قسم معرض المشاريع */
         .projects {
             background-color: var(--primary-blue);
             color: var(--white);
             padding: 60px 20px;
             text-align: center;
+            background-image: url(images/d1.png);
+            background-repeat: no-repeat;
+            background-position: top right;
         }
 
         .section-title {
@@ -181,63 +209,47 @@
             margin-bottom: 40px;
         }
 
-        .projects-grid {
-            max-width: 1200px;
-            margin: 0 auto 30px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+ /* تنسيق الشبكة لتوزيع البطاقات بشكل متجاوب */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
 
-        .project-card {
-            background-color: var(--white);
-            color: var(--text-dark);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+/* بطاقة المشروع */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
+/* تنسيق الصور السحري لمنع تمددها أو تشوهها */
+.project-img {
+    width: 100%;
+    height: 220px;       /* يمكنكِ تغيير الارتفاع المناسب لكِ */
+    object-fit: cover;   /* يقص الصورة بذكاء لملء المساحة بالتساوي */
+    display: block;
+}
 
-        .project-img {
-            width: 100%;
-            height: 200px;
-            background-color: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 3rem;
-            position: relative;
-        }
+/* نصوص البطاقة */
+.project-info {
+    padding: 20px;
+    text-align: right;   /* محاذاة النص لليمين ليناسب اللغة العربية */
+}
 
-        /* محاكاة شكل الموقع داخل الكارد */
-        .project-img::before {
-            content: "\f109";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-        }
+.project-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
 
-        .project-info {
-            padding: 20px;
-            text-align: right;
-        }
-
-        .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--dark-blue);
-        }
-
-        .project-info p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
+.project-info p {
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
         .more-btn {
             background-color: transparent;
             color: var(--white);
@@ -308,12 +320,14 @@
 
         /* قسم عن المطورة (About Lina) */
         .about-section {
-            background-color: var(--light-bg);
+            background-color: white;
+            background-image: url(images/d.png);
+            background-repeat: no-repeat;
             padding: 60px 20px;
         }
 
         .about-container {
-            max-width: 900px;
+            max-width: 200px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -323,7 +337,8 @@
             border-radius: 20px;
             flex-direction: column;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+
+            background-color: rgba(255, 255, 255, 0.45);;
         }
 
         .profile-img {
